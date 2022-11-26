@@ -1,0 +1,22 @@
+#!/bin/bash
+set -e
+
+CONDAENV=.venv_conda
+
+find_in_conda_env(){
+    conda env list | grep "${@}" >/dev/null 2>/dev/null
+}
+
+# Not working says have to run init to activate from shell but init does nothing
+if find_in_conda_env ".*$CONDAENV.*" ; then
+   conda activate $CONDAENV
+else
+  conda create -n $CONDAENV python=3.9 anaconda -y
+  conda activate $CONDAENV  # conda activate .venv_conda
+  conda install -y --file requirements.txt
+fi;
+
+
+echo ""
+
+echo "Setup completed."
