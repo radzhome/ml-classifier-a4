@@ -1,6 +1,7 @@
 #!/bin/bash
 set -e
 
+# TODO: This is not working, wont install tensorflow
 CONDAENV=.venv_conda
 
 find_in_conda_env(){

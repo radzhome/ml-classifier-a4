@@ -62,16 +62,17 @@ this assignment, d = 28 × 28 × 3 = 2352 for a vectorized image.
 
 2. Setting up the env run:
 
-    sh installer.mac 
-    conda activate .venv_conda
     conda install -y --file requirements.txt
 
 3. Extract a4data.zip
-
 
 4. Setup PyCharm (optional)
 
     cat ~/.conda/environments.txt  # Get the correct env i.e.
     /Users/<user>/opt/anaconda3/envs/.venv_conda
 
-Use the env to setup the python interperter in preferences, use existing conda (find ./bin/python)
+Use the env to setup the python interpreter in preferences, use existing conda (find ./bin/python)
+i.e.
+/Users/<user>>/opt/anaconda3/bin/python
+
+5. Run python a4code.py
